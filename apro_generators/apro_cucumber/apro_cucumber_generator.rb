@@ -11,9 +11,10 @@ class AproCucumberGenerator < RubiGen::Base
 
   def manifest
     record do |m|
-      # Ensure appropriate folder(s) exists
+
+      m.dependency 'apro_rake', []
+      
       m.directory 'features'
-      m.directory 'tasks'
       m.file 'cucumber.rake', 'tasks/cucumber.rake'
 
       # Create stubs

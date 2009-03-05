@@ -31,6 +31,7 @@ class TestAproCucumberGenerator < Test::Unit::TestCase
     run_generator('apro_cucumber', [], sources)
     assert_directory_exists "features"
     assert_generated_file   "tasks/cucumber.rake"
+    assert_generated_file   "Rakefile"
   end
 
   private
