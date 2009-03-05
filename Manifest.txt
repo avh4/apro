@@ -6,6 +6,9 @@ Rakefile
 apro_generators/apro_rake/apro_rake_generator.rb
 apro_generators/apro_rake/USAGE
 apro_generators/apro_rake/templates/Rakefile
+apro_generators/apro_cucumber/apro_cucumber_generator.rb
+apro_generators/apro_cucumber/USAGE
+apro_generators/apro_cucumber/templates/cucumber.rake
 lib/apro.rb
 script/console
 script/destroy
