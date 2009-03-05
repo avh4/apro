@@ -6,6 +6,11 @@ Rakefile
 app_generators/apro/apro_generator.rb
 app_generators/apro/templates/generate
 app_generators/apro/USAGE
+apro_generators/apro_objc_rake/apro_objc_rake_generator.rb
+apro_generators/apro_objc_rake/templates/Model.h
+apro_generators/apro_objc_rake/templates/Model.m
+apro_generators/apro_objc_rake/templates/objc.rake
+apro_generators/apro_objc_rake/USAGE
 apro_generators/apro_rake/apro_rake_generator.rb
 apro_generators/apro_rake/USAGE
 apro_generators/apro_rake/templates/Rakefile
