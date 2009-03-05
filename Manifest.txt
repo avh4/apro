@@ -3,6 +3,9 @@ Manifest.txt
 PostInstall.txt
 README.rdoc
 Rakefile
+apro_generators/apro_rake/apro_rake_generator.rb
+apro_generators/apro_rake/USAGE
+apro_generators/apro_rake/templates/Rakefile
 lib/apro.rb
 script/console
 script/destroy

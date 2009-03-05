@@ -2,12 +2,8 @@ class AproRakeGenerator < RubiGen::Base
 
   default_options :author => nil
 
-  attr_reader :name
-
   def initialize(runtime_args, runtime_options = {})
     super
-    usage if args.empty?
-    @name = args.shift
     extract_options
   end
 
