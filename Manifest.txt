@@ -6,6 +6,12 @@ Rakefile
 app_generators/apro/apro_generator.rb
 app_generators/apro/templates/generate
 app_generators/apro/USAGE
+apro_generators/apro_cucumber/apro_cucumber_generator.rb
+apro_generators/apro_cucumber/USAGE
+apro_generators/apro_cucumber/templates/cucumber.rake
+apro_generators/apro_objc_cucumber/apro_objc_cucumber_generator.rb
+apro_generators/apro_objc_cucumber/templates/objc_steps.rb
+apro_generators/apro_objc_cucumber/USAGE
 apro_generators/apro_objc_rake/apro_objc_rake_generator.rb
 apro_generators/apro_objc_rake/templates/Model.h
 apro_generators/apro_objc_rake/templates/Model.m
@@ -14,9 +20,6 @@ apro_generators/apro_objc_rake/USAGE
 apro_generators/apro_rake/apro_rake_generator.rb
 apro_generators/apro_rake/USAGE
 apro_generators/apro_rake/templates/Rakefile
-apro_generators/apro_cucumber/apro_cucumber_generator.rb
-apro_generators/apro_cucumber/USAGE
-apro_generators/apro_cucumber/templates/cucumber.rake
 bin/apro
 lib/apro.rb
 script/console
