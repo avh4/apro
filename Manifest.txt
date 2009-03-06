@@ -18,9 +18,9 @@ apro_generators/apro_objc_rake/templates/Model.h
 apro_generators/apro_objc_rake/templates/Model.m
 apro_generators/apro_objc_rake/templates/objc.rake
 apro_generators/apro_objc_rake/USAGE
-apro_generators/apro_rake/apro_rake_generator.rb
-apro_generators/apro_rake/USAGE
-apro_generators/apro_rake/templates/Rakefile
+apro_generators/rake/rake_generator.rb
+apro_generators/rake/USAGE
+apro_generators/rake/templates/Rakefile
 bin/apro
 lib/apro.rb
 script/console

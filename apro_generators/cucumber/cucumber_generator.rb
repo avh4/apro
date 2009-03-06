@@ -2,8 +2,6 @@ class CucumberGenerator < RubiGen::Base
 
   default_options :author => nil
 
-  attr_reader :name
-
   def initialize(runtime_args, runtime_options = {})
     super
     extract_options
@@ -12,7 +10,7 @@ class CucumberGenerator < RubiGen::Base
   def manifest
     record do |m|
 
-      m.dependency 'apro_rake', []
+      m.dependency 'rake', []
       
       m.directory 'features'
       m.file 'cucumber.rake', 'tasks/cucumber.rake'

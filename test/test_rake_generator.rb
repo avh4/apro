@@ -28,7 +28,7 @@ class TestAproRakeGenerator < Test::Unit::TestCase
 
   def test_generator_without_options
     name = "myapp"
-    run_generator('apro_rake', [], sources)
+    run_generator('rake', [], sources)
     assert_directory_exists "tasks"
     assert_generated_file   "Rakefile"
   end

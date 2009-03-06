@@ -1,7 +1,7 @@
 require File.join(File.dirname(__FILE__), "test_generator_helper.rb")
 
 
-class TestAproCucumberGenerator < Test::Unit::TestCase
+class TestCucumberGenerator < Test::Unit::TestCase
   include RubiGen::GeneratorTestHelper
 
   def setup
@@ -27,7 +27,6 @@ class TestAproCucumberGenerator < Test::Unit::TestCase
   #   bare_teardown - place this in teardown method to destroy the TMP_ROOT or APP_ROOT folder after each test
 
   def test_generator_without_options
-    name = "myapp"
     run_generator('cucumber', [], sources)
     assert_directory_exists "features"
     assert_generated_file   "tasks/cucumber.rake"

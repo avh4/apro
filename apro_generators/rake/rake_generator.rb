@@ -1,4 +1,4 @@
-class AproRakeGenerator < RubiGen::Base
+class RakeGenerator < RubiGen::Base
 
   default_options :author => nil
 
