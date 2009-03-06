@@ -28,7 +28,7 @@ class TestAproCucumberGenerator < Test::Unit::TestCase
 
   def test_generator_without_options
     name = "myapp"
-    run_generator('apro_cucumber', [], sources)
+    run_generator('cucumber', [], sources)
     assert_directory_exists "features"
     assert_generated_file   "tasks/cucumber.rake"
     assert_generated_file   "Rakefile"

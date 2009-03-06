@@ -1,4 +1,4 @@
-class AproCucumberGenerator < RubiGen::Base
+class CucumberGenerator < RubiGen::Base
 
   default_options :author => nil
 

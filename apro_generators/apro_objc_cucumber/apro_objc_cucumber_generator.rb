@@ -13,7 +13,7 @@ class AproObjcCucumberGenerator < RubiGen::Base
     record do |m|
       # Ensure appropriate folder(s) exists
       m.dependency 'apro_obj_rake', []
-      m.dependency 'apro_cucumber', []
+      m.dependency 'cucumber', []
       m.directory 'features/steps'
       m.file 'objc_steps.rb', 'features/steps/objc_steps.rb'
       m.file 'cucumber_objc.rake', 'tasks/cucumber_objc.rake'
