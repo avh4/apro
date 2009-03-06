@@ -32,6 +32,7 @@ class TestAproObjcCucumberGenerator < Test::Unit::TestCase
     assert_generated_file   "Rakefile"
     assert_generated_file   "tasks/objc.rake"
     assert_generated_file   "tasks/cucumber.rake"
+    assert_generated_file   "tasks/cucumber_objc.rake"
   end
 
   private

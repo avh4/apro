@@ -10,6 +10,7 @@ apro_generators/apro_cucumber/apro_cucumber_generator.rb
 apro_generators/apro_cucumber/USAGE
 apro_generators/apro_cucumber/templates/cucumber.rake
 apro_generators/apro_objc_cucumber/apro_objc_cucumber_generator.rb
+apro_generators/apro_objc_cucumber/templates/cucumber_objc.rake
 apro_generators/apro_objc_cucumber/templates/objc_steps.rb
 apro_generators/apro_objc_cucumber/USAGE
 apro_generators/apro_objc_rake/apro_objc_rake_generator.rb

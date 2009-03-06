@@ -16,6 +16,7 @@ class AproObjcCucumberGenerator < RubiGen::Base
       m.dependency 'apro_cucumber', []
       m.directory 'features/steps'
       m.file 'objc_steps.rb', 'features/steps/objc_steps.rb'
+      m.file 'cucumber_objc.rake', 'tasks/cucumber_objc.rake'
 
       # Create stubs
       # m.template           "template.rb.erb", "some_file_after_erb.rb"

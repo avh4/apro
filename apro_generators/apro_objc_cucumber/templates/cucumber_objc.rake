@@ -1,0 +1,1 @@
+task :features => 'objc:compile'
