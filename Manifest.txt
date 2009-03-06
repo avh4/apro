@@ -13,11 +13,11 @@ apro_generators/apro_objc_cucumber/apro_objc_cucumber_generator.rb
 apro_generators/apro_objc_cucumber/templates/cucumber_objc.rake
 apro_generators/apro_objc_cucumber/templates/objc_steps.rb
 apro_generators/apro_objc_cucumber/USAGE
-apro_generators/apro_objc_rake/apro_objc_rake_generator.rb
-apro_generators/apro_objc_rake/templates/Model.h
-apro_generators/apro_objc_rake/templates/Model.m
-apro_generators/apro_objc_rake/templates/objc.rake
-apro_generators/apro_objc_rake/USAGE
+apro_generators/objc_rake/objc_rake_generator.rb
+apro_generators/objc_rake/templates/Model.h
+apro_generators/objc_rake/templates/Model.m
+apro_generators/objc_rake/templates/objc.rake
+apro_generators/objc_rake/USAGE
 apro_generators/rake/rake_generator.rb
 apro_generators/rake/USAGE
 apro_generators/rake/templates/Rakefile

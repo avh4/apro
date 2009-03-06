@@ -1,7 +1,7 @@
 require File.join(File.dirname(__FILE__), "test_generator_helper.rb")
 
 
-class TestAproObjcRakeGenerator < Test::Unit::TestCase
+class TestObjcRakeGenerator < Test::Unit::TestCase
   include RubiGen::GeneratorTestHelper
 
   def setup
@@ -27,7 +27,7 @@ class TestAproObjcRakeGenerator < Test::Unit::TestCase
   #   bare_teardown - place this in teardown method to destroy the TMP_ROOT or APP_ROOT folder after each test
 
   def test_generator_without_options
-    run_generator('apro_objc_rake', [], sources)
+    run_generator('objc_rake', [], sources)
     assert_generated_file   "Rakefile"
     assert_generated_file   "tasks/objc.rake"
     assert_generated_file   "Classes/Model.m"

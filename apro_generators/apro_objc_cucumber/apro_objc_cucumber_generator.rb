@@ -12,7 +12,7 @@ class AproObjcCucumberGenerator < RubiGen::Base
   def manifest
     record do |m|
       # Ensure appropriate folder(s) exists
-      m.dependency 'apro_obj_rake', []
+      m.dependency 'objc_rake', []
       m.dependency 'cucumber', []
       m.directory 'features/steps'
       m.file 'objc_steps.rb', 'features/steps/objc_steps.rb'

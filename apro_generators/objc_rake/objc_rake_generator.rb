@@ -1,8 +1,6 @@
-class AproObjcRakeGenerator < RubiGen::Base
+class ObjcRakeGenerator < RubiGen::Base
 
   default_options :author => nil
-
-  attr_reader :name
 
   def initialize(runtime_args, runtime_options = {})
     super
