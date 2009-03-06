@@ -1,8 +1,6 @@
-class AproObjcCucumberGenerator < RubiGen::Base
+class ObjcCucumberGenerator < RubiGen::Base
 
   default_options :author => nil
-
-  attr_reader :name
 
   def initialize(runtime_args, runtime_options = {})
     super

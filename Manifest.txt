@@ -9,10 +9,10 @@ app_generators/apro/USAGE
 apro_generators/cucumber/cucumber_generator.rb
 apro_generators/cucumber/USAGE
 apro_generators/cucumber/templates/cucumber.rake
-apro_generators/apro_objc_cucumber/apro_objc_cucumber_generator.rb
-apro_generators/apro_objc_cucumber/templates/cucumber_objc.rake
-apro_generators/apro_objc_cucumber/templates/objc_steps.rb
-apro_generators/apro_objc_cucumber/USAGE
+apro_generators/objc_cucumber/objc_cucumber_generator.rb
+apro_generators/objc_cucumber/templates/cucumber_objc.rake
+apro_generators/objc_cucumber/templates/objc_steps.rb
+apro_generators/objc_cucumber/USAGE
 apro_generators/objc_rake/objc_rake_generator.rb
 apro_generators/objc_rake/templates/Model.h
 apro_generators/objc_rake/templates/Model.m
