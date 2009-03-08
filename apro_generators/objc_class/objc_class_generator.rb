@@ -8,7 +8,11 @@ class ObjcClassGenerator < RubiGen::Base
     super
     usage if args.empty?
     @name = args.shift
-    @ruby_name = @name.gsub(/^[A-Z]?[A-Z]?/, '')
+    @base_path = @name.gsub(/[^\/]*$/, '')
+    @ruby_base_path = @base_path.gsub(/([A-Z])/) { '_' + $1.downcase }
+    @ruby_base_path.gsub!(/^_/, '')
+    @ruby_name = @name.gsub(/^.*\//, '')
+    @ruby_name.gsub!(/^[A-Z]?[A-Z]?/, '')
     @ruby_name.gsub!(/([A-Z])/) { '_' + $1.downcase }
     @short_name = @ruby_name.gsub(/([^_])[^_]*/) { $1 }
     @short_name.gsub!(/_/, '')
@@ -22,10 +26,12 @@ class ObjcClassGenerator < RubiGen::Base
     record do |m|
       # Ensure appropriate folder(s) exists
       m.directory 'Classes/'
+      m.directory "Classes/#{@base_path}"
       m.template 'template.m.erb', "Classes/#{name}.m"
       m.template 'template.h.erb', "Classes/#{name}.h"
       m.directory 'spec/'
-      m.template 'spec.rb.erb', "spec/#{ruby_name}_spec.rb"
+      m.directory "spec/#{@ruby_base_path}"
+      m.template 'spec.rb.erb', "spec/#{@ruby_base_path}#{ruby_name}_spec.rb"
 
       # Create stubs
       # m.template           "template.rb.erb", "some_file_after_erb.rb"

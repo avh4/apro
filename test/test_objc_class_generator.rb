@@ -40,6 +40,21 @@ class TestObjcClassGenerator < Test::Unit::TestCase
     assert_equal 'mega_class', generator.ruby_name
     assert_equal 'mc', generator.short_name
   end
+  
+  def test_generator_without_options_with_path
+    name = "SomePath/XXMegaClass"
+    run_generator('objc_class', [name], sources)
+    assert_generated_file   "Classes/SomePath/XXMegaClass.m"
+    assert_generated_file   "Classes/SomePath/XXMegaClass.h"
+    assert_generated_file   "spec/some_path/mega_class_spec.rb"
+  end
+  
+  def test_parameters_with_path
+    name = "SomePath/XXMegaClass"
+    generator = build_generator('objc_class', [name], sources, {})
+    assert_equal 'mega_class', generator.ruby_name
+    assert_equal 'mc', generator.short_name
+  end
 
   private
   def sources
