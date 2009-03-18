@@ -10,7 +10,7 @@ class ObjcRakeGenerator < RubiGen::Base
   def manifest
     record do |m|
       # Ensure appropriate folder(s) exists
-      m.dependency 'rake', []
+      m.directory 'tasks'
       m.file 'objc.rake', 'tasks/objc.rake'
       m.directory 'Classes/'
       m.file 'Model.h', 'Classes/Model.h'

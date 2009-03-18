@@ -29,7 +29,6 @@ class TestObjcCucumberGenerator < Test::Unit::TestCase
   def test_generator_without_options
     run_generator('objc_cucumber', [], sources)
     assert_generated_file   "features/steps/objc_steps.rb"
-    assert_generated_file   "Rakefile"
     assert_generated_file   "tasks/objc.rake"
     assert_generated_file   "tasks/cucumber.rake"
     assert_generated_file   "tasks/cucumber_objc.rake"

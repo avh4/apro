@@ -28,7 +28,6 @@ class TestObjcRakeGenerator < Test::Unit::TestCase
 
   def test_generator_without_options
     run_generator('objc_rake', [], sources)
-    assert_generated_file   "Rakefile"
     assert_generated_file   "tasks/objc.rake"
     assert_generated_file   "Classes/Model.m"
     assert_generated_file   "Classes/Model.h"

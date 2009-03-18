@@ -6,7 +6,6 @@ Feature: Set up a project to use rake
   Scenario: Generate Rakefile
     Given a safe folder
     When I execute apro for the project folder
-    And I execute script/generate "rake"
     Then file 'Rakefile' is created
     And rake can display tasks successfully
     And folder 'tasks' is created

@@ -27,6 +27,10 @@ class AproGenerator < RubiGen::Base
 
       m.dependency "install_rubigen_scripts", [destination_root, 'apro'],
         :shebang => options[:shebang], :collision => :force
+      
+      m.directory 'tasks'
+      m.file 'Rakefile', 'Rakefile'
+      
     end
   end
 

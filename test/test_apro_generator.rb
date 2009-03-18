@@ -29,6 +29,8 @@ class TestAproGenerator < Test::Unit::TestCase
     run_generator('apro', [APP_ROOT], sources)
     assert_generated_file   "script/generate"
     assert_generated_file   "script/destroy"
+    assert_generated_file   "Rakefile"
+    assert_directory_exists "tasks"
   end
 
   private

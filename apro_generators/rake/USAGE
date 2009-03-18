@@ -1,5 +1,0 @@
-Description:
-  Sets up a simple Rakefile that includes all tasks/**/*.rake files.
-  
-Usage:
-  

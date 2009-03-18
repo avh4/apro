@@ -10,9 +10,8 @@ class CucumberGenerator < RubiGen::Base
   def manifest
     record do |m|
 
-      m.dependency 'rake', []
-      
       m.directory 'features'
+      m.directory 'tasks'
       m.file 'cucumber.rake', 'tasks/cucumber.rake'
 
       # Create stubs
