@@ -15,6 +15,10 @@ class CucumberGenerator < RubiGen::Base
       m.directory 'features/support'
       m.directory 'tasks'
       m.file 'cucumber.rake', 'tasks/cucumber.rake'
+      m.file 'example.feature', 'features/example.feature'
+      m.file 'example_steps.rb', 'features/step_definitions/example_steps.rb'
+      m.file 'env.rb', 'features/support/env.rb'
+      m.file 'example_support.rb', 'features/support/example.rb'
 
       # Create stubs
       # m.template           "template.rb.erb", "some_file_after_erb.rb"

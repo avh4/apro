@@ -9,8 +9,12 @@ app_generators/apro/templates/generate
 app_generators/apro/templates/Rakefile
 app_generators/apro/USAGE
 apro_generators/cucumber/cucumber_generator.rb
-apro_generators/cucumber/USAGE
 apro_generators/cucumber/templates/cucumber.rake
+apro_generators/cucumber/templates/env.rb
+apro_generators/cucumber/templates/example.feature
+apro_generators/cucumber/templates/example_steps.rb
+apro_generators/cucumber/templates/example_support.rb
+apro_generators/cucumber/USAGE
 apro_generators/objc_class/objc_class_generator.rb
 apro_generators/objc_class/templates/spec.rb.erb
 apro_generators/objc_class/templates/template.h.erb

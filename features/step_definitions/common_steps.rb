@@ -41,3 +41,10 @@ Then /^the output of `(.*)` should contain "(.*)"$/ do |cmd, text|
     output_of(cmd).should include(text)
   end
 end
+
+Then /^the output of `(.*)` should contain \/(.*)\/$/ do |cmd, regex|
+  in_project_folder do
+    capture_output cmd
+    output_of(cmd).should match(/#{regex}/)
+  end
+end
