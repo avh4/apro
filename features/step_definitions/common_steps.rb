@@ -33,3 +33,10 @@ Then /^folder '(.*)' (is|is not) created/ do |file, is|
     File.directory?(file).should(is == 'is' ? be_true : be_false)
   end
 end
+
+Then /^the output of `(.*)` should contain "(.*)"$/ do |cmd, text|
+  in_project_folder do
+    capture_output cmd
+    output_of(cmd).should include(text)
+  end
+end

@@ -28,6 +28,20 @@ module CommonHelpers
     stdout = File.expand_path(File.join(@tmp_root, output_file))
     system "#{cmd} > #{stdout}"
   end
+  
+  def output_file_for(cmd)
+    File.expand_path(File.join(@tmp_root, cmd.gsub(/[^A-Za-z09-]/, '_') << ".out"))
+  end
+  
+  def capture_output(cmd)
+    stdout = output_file_for(cmd)
+    system "#{cmd} > #{stdout} 2> #{stdout}"
+  end
+  
+  def output_of(cmd)
+    output_file = output_file_for(cmd)
+    File.read(output_file)
+  end
 
 end
 

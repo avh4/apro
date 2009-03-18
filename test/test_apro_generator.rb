@@ -31,6 +31,7 @@ class TestAproGenerator < Test::Unit::TestCase
     assert_generated_file   "script/destroy"
     assert_generated_file   "Rakefile"
     assert_directory_exists "tasks"
+    assert_generated_file   "tasks/example.rake"
   end
 
   private

@@ -9,3 +9,10 @@ Feature: Set up a project to use rake
     Then file 'Rakefile' is created
     And rake can display tasks successfully
     And folder 'tasks' is created
+  
+  Scenario: Sample .rake file
+    Given a safe folder
+    When I execute apro for the project folder
+    Then file 'tasks/example.rake' is created
+    And the output of `rake` should contain "Edit tasks/example.rake to create your tasks."
+  
