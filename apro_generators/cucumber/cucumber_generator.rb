@@ -11,6 +11,8 @@ class CucumberGenerator < RubiGen::Base
     record do |m|
 
       m.directory 'features'
+      m.directory 'features/step_definitions'
+      m.directory 'features/support'
       m.directory 'tasks'
       m.file 'cucumber.rake', 'tasks/cucumber.rake'
 

@@ -30,6 +30,8 @@ class TestCucumberGenerator < Test::Unit::TestCase
     run_generator('cucumber', [], sources)
     assert_directory_exists "features"
     assert_generated_file   "tasks/cucumber.rake"
+    assert_directory_exists "features/step_definitions"
+    assert_directory_exists "features/support"
   end
 
   private

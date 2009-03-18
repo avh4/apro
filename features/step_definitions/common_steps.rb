@@ -3,14 +3,15 @@ Given /^a safe folder/ do
 end
 
 When /^I execute apro for the project folder$/ do
+  install_generators("apro_generators")
   in_project_folder do
-    capture_stdout "#{apro_cmd} .", "apro.out"
+    capture_output "#{apro_cmd} ."
   end
 end
 
-When /^I execute script\/generate "rake"$/ do
+When /^I execute script\/generate "(.*)"$/ do |gen|
   in_project_folder do
-    capture_stdout "./script/generate rake", "generate_rake.out"
+    capture_output "ruby -I#{@lib_path} ./script/generate #{gen}"
   end
 end
 
@@ -22,7 +23,7 @@ end
 
 Then /^rake can display tasks successfully$/ do
   in_project_folder do
-    capture_stdout_stderr "rake -T", "rake.out"
+    capture_output"rake -T"
     $?.exitstatus.should == 0
   end
 end

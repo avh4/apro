@@ -3,6 +3,7 @@ module CommonHelpers
     FileUtils.rm_rf   @tmp_root = File.expand_path(File.dirname(__FILE__) + "/../../tmp")
     FileUtils.mkdir_p @tmp_root
     FileUtils.mkdir_p @home_path = File.expand_path(File.join(@tmp_root, "home"))
+    ENV['HOME'] = @home_path
     FileUtils.mkdir_p @project_path = File.expand_path(File.join(@tmp_root, "project"))
     @lib_path = File.expand_path(File.dirname(__FILE__) + '/../../lib')
   end
@@ -19,18 +20,8 @@ module CommonHelpers
     FileUtils.chdir(@home_path, &block)
   end
 
-  def capture_stdout_stderr(cmd, output_file)
-    stdout = File.expand_path(File.join(@tmp_root, output_file))
-    system "#{cmd} > #{stdout} 2> #{stdout}"
-  end
-  
-  def capture_stdout(cmd, output_file)
-    stdout = File.expand_path(File.join(@tmp_root, output_file))
-    system "#{cmd} > #{stdout}"
-  end
-  
   def output_file_for(cmd)
-    File.expand_path(File.join(@tmp_root, cmd.gsub(/[^A-Za-z09-]/, '_') << ".out"))
+    File.expand_path(File.join(@tmp_root, cmd.gsub(/[^A-Za-z0-9]/, '_') << ".out"))
   end
   
   def capture_output(cmd)

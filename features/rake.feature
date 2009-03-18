@@ -1,5 +1,5 @@
 Feature: Set up a project to use rake
-  In order have an easy-to-use build system
+  In order to have an easy-to-use build system
   As a developer
   I want a standard Rakefile to be created
   
