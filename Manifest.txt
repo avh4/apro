@@ -8,6 +8,10 @@ app_generators/apro/templates/example.rake
 app_generators/apro/templates/generate
 app_generators/apro/templates/Rakefile
 app_generators/apro/USAGE
+apro_generators/iphone_feature/iphone_feature_generator.rb
+apro_generators/iphone_feature/templates
+apro_generators/iphone_feature/templates/Feature.m.erb
+apro_generators/iphone_feature/USAGE
 apro_generators/cucumber/cucumber_generator.rb
 apro_generators/cucumber/templates/cucumber.rake
 apro_generators/cucumber/templates/env.rb
