@@ -1,15 +1,14 @@
-class IphoneFeatureGenerator < RubiGen::Base
+require 'apro'
+class IphoneFeatureGenerator < Apro::DatedGenerator
 
   default_options :author => nil
 
-  attr_reader :name, :date, :year
+  attr_reader :name
 
   def initialize(runtime_args, runtime_options = {})
     super
     usage if args.empty?
     @name = args.shift
-    @date = Time.now.strftime("%Y-%m-%d")
-    @year = Time.now.strftime("%Y")
     extract_options
   end
 

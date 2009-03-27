@@ -34,6 +34,7 @@ apro_generators/objc_rake/templates/Model.m
 apro_generators/objc_rake/templates/objc.rake
 apro_generators/objc_rake/USAGE
 bin/apro
+lib/apro/dated_generator.rb
 lib/apro.rb
 script/console
 script/destroy

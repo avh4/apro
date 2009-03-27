@@ -1,8 +1,9 @@
-class ObjcClassGenerator < RubiGen::Base
+require 'apro'
+class ObjcClassGenerator < Apro::DatedGenerator
 
   default_options :author => nil
 
-  attr_reader :name, :date, :year, :short_name, :ruby_name
+  attr_reader :name, :short_name, :ruby_name
 
   def initialize(runtime_args, runtime_options = {})
     super
@@ -13,8 +14,6 @@ class ObjcClassGenerator < RubiGen::Base
     @short_name = @ruby_name.gsub(/([^_])[^_]*/) { $1 }
     @short_name.gsub!(/_/, '')
     @ruby_name.gsub!(/^_/, '')
-    @date = Time.now.strftime("%Y-%m-%d")
-    @year = Time.now.strftime("%Y")
     extract_options
   end
 
