@@ -12,6 +12,7 @@ end
 When /^I execute script\/generate "(.*)"$/ do |gen|
   in_project_folder do
     capture_output "ruby -I#{@lib_path} ./script/generate #{gen}"
+    $?.exitstatus.should == 0
   end
 end
 
