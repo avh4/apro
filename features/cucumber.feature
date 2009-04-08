@@ -22,5 +22,5 @@ Feature: Set up a project to use cucumber
     And file 'features/step_definitions/example_steps.rb' is created
     And file 'features/support/example.rb' is created
     And the output of `rake features` should contain "1 scenario"
-    And the output of `rake features` should contain "3 steps passed"
+    And the output of `rake features` should contain "3 passed steps"
     
