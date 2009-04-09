@@ -19,6 +19,9 @@ apro_generators/cucumber/templates/example.feature
 apro_generators/cucumber/templates/example_steps.rb
 apro_generators/cucumber/templates/example_support.rb
 apro_generators/cucumber/USAGE
+apro_generators/html/html_generator.rb
+apro_generators/html/templates/index.html
+apro_generators/html/USAGE
 apro_generators/objc_class/objc_class_generator.rb
 apro_generators/objc_class/templates/spec.rb.erb
 apro_generators/objc_class/templates/template.h.erb
