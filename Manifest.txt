@@ -22,6 +22,12 @@ apro_generators/cucumber/USAGE
 apro_generators/html/html_generator.rb
 apro_generators/html/templates/index.html
 apro_generators/html/USAGE
+apro_generators/install_php/install_php_generator.rb
+apro_generators/install_php/templates/lighttpd.conf.erb
+apro_generators/install_php/templates/php-lighttpd.rake
+apro_generators/install_php/templates/php.ini
+apro_generators/install_php/templates/SETUP.txt
+apro_generators/install_php/USAGE
 apro_generators/objc_class/objc_class_generator.rb
 apro_generators/objc_class/templates/spec.rb.erb
 apro_generators/objc_class/templates/template.h.erb
