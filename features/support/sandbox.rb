@@ -11,6 +11,10 @@ module CommonHelpers
   def in_tmp_folder(&block)
     FileUtils.chdir(@tmp_root, &block)
   end
+  
+  def project_file(file)
+    File.expand_path(File.join(@project_path, file))
+  end
 
   def in_project_folder(&block)
     FileUtils.chdir(@project_path, &block)
