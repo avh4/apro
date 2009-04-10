@@ -11,5 +11,6 @@ Feature: PHP test server
     When I execute script/generate "install_php"
     And I execute rake "start"
     Then fetching "http://localhost:3000/" should return an HTML document
+    And file 'SETUP.txt' should exist
     And CLEANUP: kill the php server
   

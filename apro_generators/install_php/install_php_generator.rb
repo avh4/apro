@@ -14,7 +14,9 @@ class InstallPhpGenerator < RubiGen::Base
       m.file 'php-lighttpd.rake', 'tasks/php-lighttpd.rake'
       m.directory 'httpd'
       m.file 'lighttpd.conf.erb', 'httpd/lighttpd.conf.erb'
+      m.file 'php.ini', 'httpd/php.ini'
       m.directory 'htdocs'
+      m.file 'SETUP.txt', 'SETUP.txt'
 
       # Create stubs
       # m.template           "template.rb.erb", "some_file_after_erb.rb"

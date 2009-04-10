@@ -31,6 +31,8 @@ class TestInstallPhpGenerator < Test::Unit::TestCase
     assert_file_exists "tasks/php-lighttpd.rake"
     assert_file_exists "httpd/lighttpd.conf.erb"
     assert_directory_exists "htdocs"
+    assert_file_exists "httpd/php.ini"
+    assert_file_exists "SETUP.txt"
   end
 
   private
