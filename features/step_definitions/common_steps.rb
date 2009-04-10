@@ -15,6 +15,13 @@ Then /^rake can display tasks successfully$/ do
   end
 end
 
+When /^I execute rake "(.*)"$/ do |task|
+  in_project_folder do
+    capture_output_should_succeed "rake --trace #{task}"
+  end
+end
+
+
 Then /^folder '(.*)' (should|should not) exist/ do |file, is|
   in_project_folder do
     File.exists?(file).should(is == 'should' ? be_true : be_false)

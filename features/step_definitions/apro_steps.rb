@@ -21,3 +21,10 @@ When /^I execute script\/generate "(.*)"$/ do |gen|
   end
 end
 
+Given /^lighttpd is installed$/ do
+  File.exist?("/opt/local/sbin/lighttpd").should be_true
+end
+
+Given /^php5 \+fastcgi is installed$/ do
+  File.exist?("/opt/local/bin/php-cgi").should be_true
+end

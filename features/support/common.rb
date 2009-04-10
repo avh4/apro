@@ -29,6 +29,13 @@ module CommonHelpers
     system "#{cmd} > #{stdout} 2> #{stdout}"
   end
   
+  def capture_output_should_succeed(cmd)
+    capture_output cmd
+    if $?.exitstatus != 0
+      fail output_of(cmd)
+    end
+  end
+  
   def output_of(cmd)
     output_file = output_file_for(cmd)
     File.read(output_file)
