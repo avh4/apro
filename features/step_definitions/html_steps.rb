@@ -8,3 +8,9 @@ Then /^'(.*)' should be valid XHTML$/ do |file|
     html.should include("<body>")
   end
 end
+
+Then /^fetching "(http.*)" should return an HTML document$/ do |url|
+  require 'net/http'
+  html = Net::HTTP.get URI.parse(url)
+  html.should include("<html")
+end
