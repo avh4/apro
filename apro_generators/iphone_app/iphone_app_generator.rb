@@ -23,6 +23,7 @@ class IphoneAppGenerator < RubiGen::Base
         "Classes/RootViewController.m", "Classes/RootViewController.h",
         "Classes/AppDelegate.m", "Classes/AppDelegate.h"]
       m.file 'Project_Prefix.pch', "#{name}_Prefix.pch"
+      m.file '_gitignore', '.gitignore'
 
       # Create stubs
       # m.template           "template.rb.erb", "some_file_after_erb.rb"

@@ -1,10 +1,12 @@
+ORIG_HOME = ENV['HOME']
+
 module CommonHelpers
   def setup_safe_folder
     FileUtils.rm_rf   @tmp_root = File.expand_path(File.dirname(__FILE__) + "/../../tmp")
     FileUtils.mkdir_p @tmp_root
     FileUtils.mkdir_p @home_path = File.expand_path(File.join(@tmp_root, "home"))
     FileUtils.mkdir_p File.join(@home_path, "Library")
-    FileUtils.ln_s File.expand_path("~/Library/Keychains"), File.join(@home_path, "Library/Keychains")
+    FileUtils.ln_s File.expand_path(File.join(ORIG_HOME, "Library/Keychains")), File.join(@home_path, "Library/Keychains")
     ENV['HOME'] = @home_path
     FileUtils.mkdir_p @project_path = File.expand_path(File.join(@tmp_root, "project"))
     @lib_path = File.expand_path(File.dirname(__FILE__) + '/../../lib')
