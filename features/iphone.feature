@@ -5,7 +5,7 @@ Feature: iPhone application
 
   Scenario: iPhone application
     Given an apro folder
-    When I execute script/generate "iphone_app MyProject"
+    When I execute script/generate "iphone_app MyCrazyProject"
     And I execute rake "build"
-    Then file 'build/Release-iphoneos/MyNewProject.app/PkgInfo' should exist
+    Then file 'build/Release-iphoneos/MyCrazyProject.app/PkgInfo' should exist
   

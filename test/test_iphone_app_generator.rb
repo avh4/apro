@@ -35,6 +35,11 @@ class TestIphoneAppGenerator < Test::Unit::TestCase
     assert_generated_file "MainWindow.xib"
     assert_generated_file "RootViewController.xib"
     assert_generated_file "MyProject_Prefix.pch"
+    assert_generated_file "Classes/RootViewController.m"
+    assert_generated_file "Classes/RootViewController.h"
+    assert_generated_file "Classes/AppDelegate.m"
+    assert_generated_file "Classes/AppDelegate.h"
+    assert_generated_file "main.m"
   end
 
   private
