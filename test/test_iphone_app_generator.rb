@@ -31,6 +31,10 @@ class TestIphoneAppGenerator < Test::Unit::TestCase
     run_generator('iphone_app', [name], sources)
     assert_generated_file "tasks/iphone.rake"
     assert_generated_file "MyProject.xcodeproj/project.pbxproj"
+    assert_generated_file "Info.plist"
+    assert_generated_file "MainWindow.xib"
+    assert_generated_file "RootViewController.xib"
+    assert_generated_file "MyProject_Prefix.pch"
   end
 
   private
