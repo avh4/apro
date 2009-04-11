@@ -21,6 +21,7 @@ namespace :php do
     Dir.chdir("httpd/") do
       FileUtils::mkdir_p "log/"
       sh "/opt/local/sbin/lighttpd -D -f lighttpd.conf &"
+      sh "sleep 1"
       puts "Started lighttpd"
     end
   end
