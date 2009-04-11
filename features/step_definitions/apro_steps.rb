@@ -10,6 +10,12 @@ Given /^an apro folder/ do
   helper_execute_apro
 end
 
+Given /^the apro folder is a git repository$/ do
+  in_project_folder do
+    capture_output_should_succeed "git init"
+  end
+end
+
 When /^I execute apro for the project folder$/ do
   helper_execute_apro
 end

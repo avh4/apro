@@ -21,6 +21,13 @@ When /^I execute rake "(.*)"$/ do |task|
   end
 end
 
+When /^I create a non\-empty folder "([^\"]*)"$/ do |folder|
+  in_project_folder do
+    FileUtils.mkdir_p folder
+    FileUtils.touch File.join(folder, "a")
+  end
+end
+
 
 Then /^folder '(.*)' (should|should not) exist/ do |file, is|
   in_project_folder do
@@ -29,10 +36,14 @@ Then /^folder '(.*)' (should|should not) exist/ do |file, is|
   end
 end
 
-Then /^the output of `(.*)` should contain "(.*)"$/ do |cmd, text|
+Then /^the output of `(.*)` (should|should not) contain "(.*)"$/ do |cmd, is, text|
   in_project_folder do
     capture_output cmd
-    output_of(cmd).should include(text)
+    if is == 'should'
+      output_of(cmd).should include(text)
+    else
+      output_of(cmd).should_not include(text)
+    end
   end
 end
 

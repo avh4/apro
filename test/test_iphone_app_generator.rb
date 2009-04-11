@@ -40,6 +40,7 @@ class TestIphoneAppGenerator < Test::Unit::TestCase
     assert_generated_file "Classes/AppDelegate.m"
     assert_generated_file "Classes/AppDelegate.h"
     assert_generated_file "main.m"
+    assert_generated_file ".gitignore"
   end
 
   private
