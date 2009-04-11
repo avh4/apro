@@ -29,8 +29,8 @@ module CommonHelpers
   end
   
   def capture_output(cmd)
-    stdout = output_file_for(cmd)
-    system "#{cmd} > #{stdout} 2> #{stdout}"
+    output = `#{cmd} 2>&1`
+    File.open(output_file_for(cmd), 'w') {|f| f.write output }
   end
   
   def capture_output_should_succeed(cmd)
