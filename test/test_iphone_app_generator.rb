@@ -47,6 +47,7 @@ class TestIphoneAppGenerator < Test::Unit::TestCase
     name = "MyProject"
     run_generator('iphone_app', [name], sources)
     assert_generated_file "Tests/ExampleTest.m"
+    assert_generated_file "Unit Tests-Info.plist"
   end
 
   private

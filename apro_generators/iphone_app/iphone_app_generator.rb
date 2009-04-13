@@ -25,6 +25,7 @@ class IphoneAppGenerator < RubiGen::Base
         'Resources/MainWindow.xib', 'Resources/RootViewController.xib',
         "Classes/RootViewController.m", "Classes/RootViewController.h",
         "Classes/AppDelegate.m", "Classes/AppDelegate.h",
+        "Unit Tests-Info.plist",
         "Tests/ExampleTest.m"]
       m.file 'Project_Prefix.pch', "#{name}_Prefix.pch"
       m.file '_gitignore', '.gitignore'
