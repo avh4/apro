@@ -64,6 +64,14 @@ class TestIphoneAppGenerator < Test::Unit::TestCase
     assert_generated_file "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMSenTestCase.m"
     assert_generated_file "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMUIKit+UnitTesting.h"
     assert_generated_file "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMUIKit+UnitTesting.m"
+    assert_generated_file "lib/objc/OCMock.framework/Headers/OCMock.h"
+    assert_generated_file "lib/objc/OCMock.framework/Headers/OCMockObject.h"
+    assert_generated_file "lib/objc/OCMock.framework/Headers/OCMockRecorder.h"
+    assert_generated_file "lib/objc/OCMock.framework/Headers/OCMConstraint.h"
+    assert_generated_file "lib/objc/OCMock.framework/OCMock"
+    assert_generated_file "lib/objc/OCMock.framework/Resources/Info.plist"
+    assert_generated_file "lib/objc/OCMock.framework/Resources/License.txt"
+    assert_generated_file "lib/objc/OCMock.framework/Resources/English.lproj/InfoPlist.strings"
   end
 
   private

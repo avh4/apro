@@ -1,3 +1,7 @@
+# We are copying symlinks in this generator,
+# which only works in rubigen 1.5.2.1 < http://github.com/avh4/rubigen >
+gem "rubigen", ">=1.5.2.1"
+
 class IphoneAppGenerator < RubiGen::Base
 
   default_options :author => nil
@@ -50,6 +54,19 @@ class IphoneAppGenerator < RubiGen::Base
       m.file "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/RunIPhoneUnitTest.sh",
         "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/RunIPhoneUnitTest.sh",
         {:chmod => 0755}
+      m.directory "lib/objc/OCMock.framework"
+      m.directory "lib/objc/OCMock.framework/Versions/A/Headers"
+      m.directory "lib/objc/OCMock.framework/Versions/A/Resources"
+      m.directory "lib/objc/OCMock.framework/Versions/A/Resources/English.lproj"
+      ["Headers", "OCMock", "Resources", "Versions/Current"].each do |f|
+        m.file_copy_each ["lib/objc/OCMock.framework/#{f}"]
+      end
+      ["Headers/OCMock.h", "Headers/OCMockObject.h",
+        "Headers/OCMockRecorder.h", "Headers/OCMConstraint.h",
+        "OCMock", "Resources/Info.plist", "Resources/License.txt",
+        "Resources/English.lproj/InfoPlist.strings"].each do |f|
+        m.file_copy_each ["lib/objc/OCMock.framework/Versions/A/#{f}"]
+      end
       m.file 'Project_Prefix.pch', "#{name}_Prefix.pch"
       m.file '_gitignore', '.gitignore'
 

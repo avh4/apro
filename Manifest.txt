@@ -47,6 +47,14 @@ apro_generators/iphone_app/templates/lib/objc/google-toolbox-for-mac-1.5.1/UnitT
 apro_generators/iphone_app/templates/lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMUIKit+UnitTesting.h
 apro_generators/iphone_app/templates/lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMUIKit+UnitTesting.m
 apro_generators/iphone_app/templates/lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/RunIPhoneUnitTest.sh
+apro_generators/iphone_app/templates/lib/objc/OCMock.framework/Versions/A/Headers/OCMConstraint.h
+apro_generators/iphone_app/templates/lib/objc/OCMock.framework/Versions/A/Headers/OCMock.h
+apro_generators/iphone_app/templates/lib/objc/OCMock.framework/Versions/A/Headers/OCMockObject.h
+apro_generators/iphone_app/templates/lib/objc/OCMock.framework/Versions/A/Headers/OCMockRecorder.h
+apro_generators/iphone_app/templates/lib/objc/OCMock.framework/Versions/A/OCMock
+apro_generators/iphone_app/templates/lib/objc/OCMock.framework/Versions/A/Resources/English.lproj/InfoPlist.strings
+apro_generators/iphone_app/templates/lib/objc/OCMock.framework/Versions/A/Resources/Info.plist
+apro_generators/iphone_app/templates/lib/objc/OCMock.framework/Versions/A/Resources/License.txt
 apro_generators/iphone_app/templates/main.m
 apro_generators/iphone_app/templates/project.pbxproj.erb
 apro_generators/iphone_app/templates/Project_Prefix.pch
