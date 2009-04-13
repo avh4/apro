@@ -31,7 +31,6 @@ class IphoneAppGenerator < RubiGen::Base
       m.directory "lib/objc/google-toolbox-for-mac-1.5.1/Foundation"
       m.directory "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting"
       m.file_copy_each [
-        "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/RunIPhoneUnitTest.sh",
         "lib/objc/google-toolbox-for-mac-1.5.1/GTMDefines.h",
         "lib/objc/google-toolbox-for-mac-1.5.1/Foundation/GTMGarbageCollection.h",
         "lib/objc/google-toolbox-for-mac-1.5.1/Foundation/GTMSystemVersion.h",
@@ -48,6 +47,9 @@ class IphoneAppGenerator < RubiGen::Base
         "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMUIKit+UnitTesting.h",
         "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMUIKit+UnitTesting.m",
         ]
+      m.file "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/RunIPhoneUnitTest.sh",
+        "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/RunIPhoneUnitTest.sh",
+        {:chmod => 0755}
       m.file 'Project_Prefix.pch', "#{name}_Prefix.pch"
       m.file '_gitignore', '.gitignore'
 
