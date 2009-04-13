@@ -62,6 +62,7 @@ apro_generators/iphone_app/templates/Resources/MainWindow.xib
 apro_generators/iphone_app/templates/Resources/RootViewController.xib
 apro_generators/iphone_app/templates/tasks/iphone.rake
 apro_generators/iphone_app/templates/Tests/ExampleTest.m
+apro_generators/iphone_app/templates/Tests/ExampleTest.testButton.iPhone.10.5.6.png
 apro_generators/iphone_app/templates/Unit Tests-Info.plist
 apro_generators/iphone_app/USAGE
 apro_generators/iphone_feature/iphone_feature_generator.rb

@@ -30,7 +30,7 @@ class IphoneAppGenerator < RubiGen::Base
         "Classes/RootViewController.m", "Classes/RootViewController.h",
         "Classes/AppDelegate.m", "Classes/AppDelegate.h",
         "Unit Tests-Info.plist",
-        "Tests/ExampleTest.m"]
+        "Tests/ExampleTest.m", "Tests/ExampleTest.testButton.iPhone.10.5.6.png"]
       m.directory "lib/objc/google-toolbox-for-mac-1.5.1"
       m.directory "lib/objc/google-toolbox-for-mac-1.5.1/Foundation"
       m.directory "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting"
