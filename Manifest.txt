@@ -32,10 +32,10 @@ apro_generators/iphone_app/templates/Classes/RootViewController.h
 apro_generators/iphone_app/templates/Classes/RootViewController.m
 apro_generators/iphone_app/templates/Info.plist
 apro_generators/iphone_app/templates/main.m
-apro_generators/iphone_app/templates/MainWindow.xib
-apro_generators/iphone_app/templates/Project.xcodeproj/project.pbxproj.erb
+apro_generators/iphone_app/templates/project.pbxproj.erb
 apro_generators/iphone_app/templates/Project_Prefix.pch
-apro_generators/iphone_app/templates/RootViewController.xib
+apro_generators/iphone_app/templates/Resources/MainWindow.xib
+apro_generators/iphone_app/templates/Resources/RootViewController.xib
 apro_generators/iphone_app/templates/tasks/iphone.rake
 apro_generators/iphone_app/USAGE
 apro_generators/iphone_feature/iphone_feature_generator.rb

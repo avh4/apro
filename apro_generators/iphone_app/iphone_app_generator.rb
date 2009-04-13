@@ -18,8 +18,10 @@ class IphoneAppGenerator < RubiGen::Base
       m.file_copy_each ['tasks/iphone.rake']
       m.directory "#{name}.xcodeproj"
       m.directory "Classes"
-      m.template 'Project.xcodeproj/project.pbxproj.erb', "#{name}.xcodeproj/project.pbxproj"
-      m.file_copy_each ['Info.plist', 'MainWindow.xib', 'RootViewController.xib', "main.m",
+      m.directory "Resources"
+      m.template 'project.pbxproj.erb', "#{name}.xcodeproj/project.pbxproj"
+      m.file_copy_each ['Info.plist', "main.m",
+        'Resources/MainWindow.xib', 'Resources/RootViewController.xib',
         "Classes/RootViewController.m", "Classes/RootViewController.h",
         "Classes/AppDelegate.m", "Classes/AppDelegate.h"]
       m.file 'Project_Prefix.pch', "#{name}_Prefix.pch"
