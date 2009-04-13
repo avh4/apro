@@ -3,11 +3,15 @@ Feature: Create iphone BDD features
   As an iPhone developer
   I want to generate a template for an iPhone app feature
   
-  Scenario: Creating a GTM test template
+  Scenario: Creating a feature
     Given a safe folder
     When I execute apro for the project folder
     And I execute script/generate "iphone_feature XXWorldHunger"
     Then folder 'Features' should exist
     And file 'Features/XXWorldHunger.m' should exist
-    ## TODO And the output of "rake features" contains "Executed 3 tests, with 0 failures (0 unexpected) in 0.504 (0.504) seconds" 
+    
+  Scenario: Creating an iPhone application with example tests
+    Given an apro folder
+    When I execute script/generate "iphone_app MyCrazyApp"
+    Then the output of `rake test` should contain "Executed 3 tests, with 0 failures (0 unexpected)"
   
