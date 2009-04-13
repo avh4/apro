@@ -22,6 +22,10 @@
 		B19CBC7A0F92D23200746225 /* GTMNSObject+UnitTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = B19CBC710F92D23200746225 /* GTMNSObject+UnitTesting.m */; };
 		B19CBC7B0F92D23200746225 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B19CBC730F92D23200746225 /* GTMSenTestCase.m */; };
 		B19CBC7C0F92D23200746225 /* GTMUIKit+UnitTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = B19CBC750F92D23200746225 /* GTMUIKit+UnitTesting.m */; };
+		B19CBC7F0F92D2E500746225 /* RunIPhoneUnitTest.sh in Resources */ = {isa = PBXBuildFile; fileRef = B19CBC7E0F92D2E500746225 /* RunIPhoneUnitTest.sh */; };
+		B19CBCA20F92D37C00746225 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		B19CBCA30F92D37D00746225 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		B19CBCA40F92D37E00746225 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +59,7 @@
 		B19CBC730F92D23200746225 /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMSenTestCase.m; sourceTree = "<group>"; };
 		B19CBC740F92D23200746225 /* GTMUIKit+UnitTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMUIKit+UnitTesting.h"; sourceTree = "<group>"; };
 		B19CBC750F92D23200746225 /* GTMUIKit+UnitTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMUIKit+UnitTesting.m"; sourceTree = "<group>"; };
+		B19CBC7E0F92D2E500746225 /* RunIPhoneUnitTest.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = RunIPhoneUnitTest.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +77,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B19CBCA20F92D37C00746225 /* UIKit.framework in Frameworks */,
+				B19CBCA30F92D37D00746225 /* Foundation.framework in Frameworks */,
+				B19CBCA40F92D37E00746225 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +184,7 @@
 				B19CBC730F92D23200746225 /* GTMSenTestCase.m */,
 				B19CBC740F92D23200746225 /* GTMUIKit+UnitTesting.h */,
 				B19CBC750F92D23200746225 /* GTMUIKit+UnitTesting.m */,
+				B19CBC7E0F92D2E500746225 /* RunIPhoneUnitTest.sh */,
 			);
 			path = UnitTesting;
 			sourceTree = "<group>";
@@ -207,6 +216,7 @@
 				B19CBC590F92CDE600746225 /* Resources */,
 				B19CBC5A0F92CDE600746225 /* Sources */,
 				B19CBC5B0F92CDE600746225 /* Frameworks */,
+				B19CBC810F92D30400746225 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -256,10 +266,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B19CBC7F0F92D2E500746225 /* RunIPhoneUnitTest.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B19CBC810F92D30400746225 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/RunIPhoneUnitTest.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D60588E0D05DD3D006BFB54 /* Sources */ = {
