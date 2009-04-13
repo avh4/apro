@@ -48,6 +48,22 @@ class TestIphoneAppGenerator < Test::Unit::TestCase
     run_generator('iphone_app', [name], sources)
     assert_generated_file "Tests/ExampleTest.m"
     assert_generated_file "Unit Tests-Info.plist"
+    assert_generated_file "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/RunIPhoneUnitTest.sh"
+    assert_generated_file "lib/objc/google-toolbox-for-mac-1.5.1/GTMDefines.h"
+    assert_generated_file "lib/objc/google-toolbox-for-mac-1.5.1/Foundation/GTMGarbageCollection.h"
+    assert_generated_file "lib/objc/google-toolbox-for-mac-1.5.1/Foundation/GTMSystemVersion.h"
+    assert_generated_file "lib/objc/google-toolbox-for-mac-1.5.1/Foundation/GTMSystemVersion.m"
+    assert_generated_file "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMCALayer+UnitTesting.h"
+    assert_generated_file "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMCALayer+UnitTesting.m"
+    assert_generated_file "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMIPhoneUnitTestDelegate.h"
+    assert_generated_file "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMIPhoneUnitTestDelegate.m"
+    assert_generated_file "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMIPhoneUnitTestMain.m"
+    assert_generated_file "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMNSObject+UnitTesting.h"
+    assert_generated_file "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMNSObject+UnitTesting.m"
+    assert_generated_file "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMSenTestCase.h"
+    assert_generated_file "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMSenTestCase.m"
+    assert_generated_file "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMUIKit+UnitTesting.h"
+    assert_generated_file "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMUIKit+UnitTesting.m"
   end
 
   private

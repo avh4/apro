@@ -27,6 +27,27 @@ class IphoneAppGenerator < RubiGen::Base
         "Classes/AppDelegate.m", "Classes/AppDelegate.h",
         "Unit Tests-Info.plist",
         "Tests/ExampleTest.m"]
+      m.directory "lib/objc/google-toolbox-for-mac-1.5.1"
+      m.directory "lib/objc/google-toolbox-for-mac-1.5.1/Foundation"
+      m.directory "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting"
+      m.file_copy_each [
+        "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/RunIPhoneUnitTest.sh",
+        "lib/objc/google-toolbox-for-mac-1.5.1/GTMDefines.h",
+        "lib/objc/google-toolbox-for-mac-1.5.1/Foundation/GTMGarbageCollection.h",
+        "lib/objc/google-toolbox-for-mac-1.5.1/Foundation/GTMSystemVersion.h",
+        "lib/objc/google-toolbox-for-mac-1.5.1/Foundation/GTMSystemVersion.m",
+        "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMCALayer+UnitTesting.h",
+        "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMCALayer+UnitTesting.m",
+        "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMIPhoneUnitTestDelegate.h",
+        "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMIPhoneUnitTestDelegate.m",
+        "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMIPhoneUnitTestMain.m",
+        "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMNSObject+UnitTesting.h",
+        "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMNSObject+UnitTesting.m",
+        "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMSenTestCase.h",
+        "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMSenTestCase.m",
+        "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMUIKit+UnitTesting.h",
+        "lib/objc/google-toolbox-for-mac-1.5.1/UnitTesting/GTMUIKit+UnitTesting.m",
+        ]
       m.file 'Project_Prefix.pch', "#{name}_Prefix.pch"
       m.file '_gitignore', '.gitignore'
 
