@@ -19,11 +19,13 @@ class IphoneAppGenerator < RubiGen::Base
       m.directory "#{name}.xcodeproj"
       m.directory "Classes"
       m.directory "Resources"
+      m.directory "Tests"
       m.template 'project.pbxproj.erb', "#{name}.xcodeproj/project.pbxproj"
       m.file_copy_each ['Info.plist', "main.m",
         'Resources/MainWindow.xib', 'Resources/RootViewController.xib',
         "Classes/RootViewController.m", "Classes/RootViewController.h",
-        "Classes/AppDelegate.m", "Classes/AppDelegate.h"]
+        "Classes/AppDelegate.m", "Classes/AppDelegate.h",
+        "Tests/ExampleTest.m"]
       m.file 'Project_Prefix.pch', "#{name}_Prefix.pch"
       m.file '_gitignore', '.gitignore'
 

@@ -13,5 +13,6 @@ Feature: Create iphone BDD features
   Scenario: Creating an iPhone application with example tests
     Given an apro folder
     When I execute script/generate "iphone_app MyCrazyApp"
-    Then the output of `rake test` should contain "Executed 3 tests, with 0 failures (0 unexpected)"
+    Then file 'Tests/ExampleTest.m' should exist
+    And the output of `rake test` should contain "Executed 3 tests, with 0 failures (0 unexpected)"
   

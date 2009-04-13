@@ -42,6 +42,12 @@ class TestIphoneAppGenerator < Test::Unit::TestCase
     assert_generated_file "main.m"
     assert_generated_file ".gitignore"
   end
+  
+  def test_generator_without_options_testing_files
+    name = "MyProject"
+    run_generator('iphone_app', [name], sources)
+    assert_generated_file "Tests/ExampleTest.m"
+  end
 
   private
   def sources
