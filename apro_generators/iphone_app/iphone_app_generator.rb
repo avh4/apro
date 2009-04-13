@@ -58,15 +58,17 @@ class IphoneAppGenerator < RubiGen::Base
       m.directory "lib/objc/OCMock.framework/Versions/A/Headers"
       m.directory "lib/objc/OCMock.framework/Versions/A/Resources"
       m.directory "lib/objc/OCMock.framework/Versions/A/Resources/English.lproj"
-      ["Headers", "OCMock", "Resources", "Versions/Current"].each do |f|
-        m.file_copy_each ["lib/objc/OCMock.framework/#{f}"]
-      end
+      m.symlink "Versions/Current/Headers", "lib/objc/OCMock.framework/Headers"
+      m.symlink "Versions/Current/OCMock", "lib/objc/OCMock.framework/OCMock"
+      m.symlink "Versions/Current/Resources", "lib/objc/OCMock.framework/Resources"
+      m.symlink "A", "lib/objc/OCMock.framework/Versions/Current"
       ["Headers/OCMock.h", "Headers/OCMockObject.h",
         "Headers/OCMockRecorder.h", "Headers/OCMConstraint.h",
-        "OCMock", "Resources/Info.plist", "Resources/License.txt",
+        "Resources/Info.plist", "Resources/License.txt",
         "Resources/English.lproj/InfoPlist.strings"].each do |f|
         m.file_copy_each ["lib/objc/OCMock.framework/Versions/A/#{f}"]
       end
+      m.file "lib/objc/OCMock.framework/Versions/A/OCMock", "lib/objc/OCMock.framework/Versions/A/OCMock", {:chmod => 0755}
       m.file 'Project_Prefix.pch', "#{name}_Prefix.pch"
       m.file '_gitignore', '.gitignore'
 
