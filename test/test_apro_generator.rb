@@ -32,6 +32,7 @@ class TestAproGenerator < Test::Unit::TestCase
     assert_generated_file   "Rakefile"
     assert_directory_exists "tasks"
     assert_generated_file   "tasks/example.rake"
+    assert_generated_file   ".gitignore"
   end
 
   private

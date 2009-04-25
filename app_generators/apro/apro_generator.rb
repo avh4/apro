@@ -31,6 +31,7 @@ class AproGenerator < RubiGen::Base
       m.file 'Rakefile', 'Rakefile'
       m.directory 'tasks'
       m.file 'example.rake', 'tasks/example.rake'
+      m.file '_gitignore', '.gitignore'
       
     end
   end
