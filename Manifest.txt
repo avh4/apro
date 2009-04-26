@@ -25,6 +25,10 @@ apro_generators/install_php/templates/php-lighttpd.rake
 apro_generators/install_php/templates/php.ini
 apro_generators/install_php/templates/SETUP.txt
 apro_generators/install_php/USAGE
+apro_generators/install_rspec/install_rspec_generator.rb
+apro_generators/install_rspec/templates/example_spec.rb
+apro_generators/install_rspec/templates/rspec.rake
+apro_generators/install_rspec/USAGE
 apro_generators/iphone_app/iphone_app_generator.rb
 apro_generators/iphone_app/templates/_gitignore
 apro_generators/iphone_app/templates/Classes/AppDelegate.h
