@@ -4,6 +4,7 @@ PostInstall.txt
 README.rdoc
 Rakefile
 app_generators/apro/apro_generator.rb
+app_generators/apro/templates/_gitignore
 app_generators/apro/templates/example.rake
 app_generators/apro/templates/generate
 app_generators/apro/templates/Rakefile
