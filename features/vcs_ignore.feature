@@ -7,5 +7,5 @@ Feature: VCS ignore files
     Given a safe folder
     When I execute apro for the project folder
     Then file '.gitignore' should exist
-    And file '.gitignore' should match /^.DS_Store$/
+    And file '.gitignore' should contain /^.DS_Store$/
   

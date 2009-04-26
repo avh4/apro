@@ -8,6 +8,12 @@ Then /^file '(.*)' (should|should not) exist/ do |file, is|
   end
 end
 
+Then /^file '(.*)' should contain \/(.*)\// do |file, regex|
+  in_project_folder do
+    File.read(file).should match(/#{regex}/)
+  end
+end 
+
 Then /^rake can display tasks successfully$/ do
   in_project_folder do
     capture_output"rake -T"
